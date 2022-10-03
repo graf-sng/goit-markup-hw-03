@@ -5,7 +5,8 @@
   --acent-color: #2196f3;
   --secondary-acent-color: #188ce8;
   --secondary-bg-color: #f5f4fa;
-  --border-color: #ececec;
+  --border-color-one: #ececec;
+  --border-color-two: #eeeeee;
 }
 body {
   color: var(--primary-text-color);
@@ -51,7 +52,7 @@ a {
   margin: -1px;
 }
 .header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color-one);
 }
 .header-nav {
   display: flex;
@@ -203,7 +204,16 @@ a {
   font-size: 16px;
   line-height: 1.9;
 }
+.list-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.list-btn .item + .item {
+  margin-left: 8px;
+}
 .btn {
+  padding: 6px 25px;
   color: var(--primary-title-color);
   background-color: var(--secondary-bg-color);
   font-family: inherit;
@@ -219,8 +229,31 @@ a {
 .btn:focus {
   color: var(--secondary-text-color);
   background-color: var(--acent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.portfolio-list .item {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  min-height: 404px;
+  outline: 1px solid #eeeeee;
+}
+.portfolio-list .item:hover,
+.portfolio-list .item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.portfolio-list .item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+.portfolio-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 .portfolio-list .title {
+  margin: 20px 24px 4px;
   color: var(--primary-title-color);
   font-weight: 700;
   font-size: 18px;
@@ -228,6 +261,7 @@ a {
   letter-spacing: 0.06em;
 }
 .portfolio-list .subtitle {
+  margin: 0 24px 4px;
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
