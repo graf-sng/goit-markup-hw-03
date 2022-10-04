@@ -29,15 +29,19 @@ ul {
 a {
   text-decoration: none;
 }
+a,
+img {
+  display: block;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
-.container-section {
+.container {
   width: 1200px;
   margin: 0 auto;
-  padding: 94px 15px;
+  padding: 0 15px;
 }
 .visually-hidden {
   position: absolute;
@@ -57,10 +61,10 @@ a {
 .header-nav {
   display: flex;
   align-items: center;
-  height: 80px;
 }
 .nav {
   display: flex;
+  margin-left: 93px;
 }
 .logo {
   color: #000000;
@@ -75,7 +79,6 @@ a {
 }
 .list {
   display: flex;
-  margin-left: 93px;
 }
 .list li + li {
   margin-left: 50px;
@@ -89,8 +92,9 @@ a {
 }
 .link {
   color: var(--primary-title-color);
+  line-height: 1.14;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 32px 0;
 }
 .link:hover,
 .link:focus {
@@ -103,11 +107,11 @@ a {
   color: var(--primary-text-color);
 }
 .hero {
+  padding: 200px 0;
   background-color: #2f303a;
   text-align: center;
 }
-.hero .title {
-  max-width: 696px;
+.hero-title {
   margin: 0 auto 30px;
   color: var(--secondary-text-color);
   font-weight: 900;
@@ -135,11 +139,17 @@ a {
 .hero-btn:focus {
   background-color: var(--secondary-acent-color);
 }
+.advantages {
+  padding: 94px 0;
+}
 .advantages .container-section {
   padding-bottom: 0;
 }
 .advantages-list {
   display: flex;
+}
+.advantages-list .item {
+  width: 270px;
 }
 .advantages-list .item + .item {
   margin-left: 30px;
@@ -158,6 +168,7 @@ a {
 }
 
 .team {
+  padding: 94px 0;
   background: var(--secondary-bg-color);
 }
 .about-us .title,
@@ -168,6 +179,9 @@ a {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+.about-us {
+  padding-bottom: 94px;
 }
 .about-us .list {
   display: flex;
@@ -191,10 +205,11 @@ a {
 .team-list .item + .item {
   margin-left: 30px;
 }
-.team-img {
-  margin-bottom: 30px;
+.team-info {
+  padding: 30px 0;
 }
 .team-list .team-list-title {
+  margin-bottom: 10px;
   color: var(--primary-title-color);
   font-weight: 500;
   font-size: 16px;
@@ -232,6 +247,9 @@ a {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.section {
+  padding: 94px 0;
+}
 .portfolio-list {
   display: flex;
   flex-flow: row wrap;
@@ -239,8 +257,7 @@ a {
 .portfolio-list .item {
   margin-left: 30px;
   margin-bottom: 30px;
-  min-height: 404px;
-  outline: 1px solid #eeeeee;
+  width: 370px;
 }
 .portfolio-list .item:hover,
 .portfolio-list .item:focus {
@@ -252,8 +269,14 @@ a {
 .portfolio-list .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+.portfolio-list-info {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
 .portfolio-list .title {
-  margin: 20px 24px 4px;
+  margin-bottom: 4px;
   color: var(--primary-title-color);
   font-weight: 700;
   font-size: 18px;
@@ -261,7 +284,6 @@ a {
   letter-spacing: 0.06em;
 }
 .portfolio-list .subtitle {
-  margin: 0 24px 4px;
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -269,7 +291,7 @@ a {
 }
 .footer {
   background-color: #2f303a;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 .footer-white,
 .link-footer.footer-white {
@@ -286,6 +308,9 @@ a {
   font-weight: 400;
   line-height: 1.71;
   font-style: normal;
+}
+.address-list .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .link-footer:hover,
 .link-footer:focus {
